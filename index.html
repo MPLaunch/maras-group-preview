@@ -259,6 +259,9 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
 .rse .wrap{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(40px,6vw,100px);align-items:center;width:100%}
 .rse h2{margin:22px 0 24px}
 .rse .acts{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.rse-stats{display:flex;flex-wrap:wrap;gap:20px 46px;margin-top:30px}
+.rse-stats b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(46px,4.4vw,66px);line-height:1;color:#fff}
+.rse-stats span{display:block;margin-top:8px;max-width:200px;font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.66)}
 .mapcard{background:var(--paper);color:var(--ink);border-radius:22px;padding:12px;box-shadow:0 50px 90px rgba(0,4,16,.55);transform:rotate(1.5deg)}
 .mapcard img{border-radius:14px;width:100%;aspect-ratio:3/2;object-fit:cover}
 .mapcard .cap{display:flex;justify-content:space-between;align-items:center;padding:14px 10px 6px;font-size:13px;color:var(--slate)}
@@ -395,6 +398,9 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
   .pf-hint{display:block;margin:18px var(--pad) 0;font-size:13px;color:rgba(255,255,255,.55)}
   .pf-bar{display:none}
   .mapcard{transform:none;max-width:640px}
+  .rse::after{background:linear-gradient(180deg,rgba(0,8,28,.9) 0%,rgba(0,8,28,.82) 60%,rgba(0,8,28,.9) 100%)}
+  .rse-stats{gap:18px 30px}
+  .rse-stats span{max-width:150px}
 }
 @media (max-width:860px){
   .hdr .tel,.hdr .btn{display:none}
@@ -522,7 +528,7 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
     <p class="big rv d1">A dynamic, privately owned and operated South Australian company, broadly considered one of the <em>&ldquo;pace-setters&rdquo;</em> in the South Australian market.</p>
     <div class="about-grid">
       <div class="rv d1">
-        <p>For over 40 years the group has been at the forefront of commercial and retail property investment and development, with a lengthy and impressive track record of quality and sustainable developments, underpinned by high calibre, long term occupiers.</p>
+        <p>The story begins in 1980 with the Mancorp Group, a very well-known and respected South Australian property investment and development group, with Theo Maras as one half of it. Maras Group was formed in 2006 and carries that work forward, with a lengthy and impressive track record of quality and sustainable developments, underpinned by high calibre, long term occupiers.</p>
         <p>We develop with a view to holding our properties for the long term, giving our tenants (our partners) the confidence to build strong, healthy relationships with us. And we stay heavily committed to investment in South Australia.</p>
         <div class="links">
           <a class="tlink" href="https://www.marasgroup.com.au/about-us/overview/" target="_blank" rel="noopener">Our story<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -530,7 +536,7 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
         </div>
       </div>
       <div class="stats rv d2">
-        <div class="stat"><b><span data-count="40">40</span>+</b><span class="lb">years at the forefront of South Australian property</span></div>
+        <div class="stat"><b><span data-count="40">40</span>+</b><span class="lb">years of track record, from Mancorp in 1980 to Maras Group today</span></div>
         <div class="stat"><b data-count="4">4</b><span class="lb">states in the portfolio: SA, VIC, NSW and QLD</span></div>
         <div class="stat"><b><span data-count="60">60</span>+</b><span class="lb">awards and accolades, locally, nationally and internationally</span></div>
       </div>
@@ -631,7 +637,7 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
       <a class="pc" href="https://www.marasgroup.com.au/our-properties/retail/" target="_blank" rel="noopener"><img src="assets/pf-fullarton.webp" alt="The Guster Building on Fullarton Road at dusk" loading="lazy"><span class="idx">02</span><span class="where">Guster Building, Fullarton</span><div class="pc-body"><h3>Retail</h3><p>Shopping centres, food halls and high streets, from Adelaide to Melbourne and Sydney.</p><div class="addr">Rossiter Food Hall, Unley &middot; Torrensville Shopping Centre &middot; Burke Road, Camberwell (VIC) &middot; Elbon Arcade, Double Bay (NSW)</div><span class="tlink">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
       <a class="pc" href="https://www.marasgroup.com.au/our-properties/rundle-street-east/" target="_blank" rel="noopener"><img src="assets/pf-rse.webp" alt="Outdoor dining on Rundle Street East" loading="lazy"><span class="idx">03</span><span class="where">Rundle Street East</span><div class="pc-body"><h3>Rundle Street East</h3><p>Fashion, dining and laneway retail in the heart of Adelaide's East End.</p><div class="addr">Rundle Street &middot; Ebenezer Place &middot; Union Street</div><span class="tlink">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
       <a class="pc" href="https://www.marasgroup.com.au/our-properties/banking-chambers/" target="_blank" rel="noopener"><img src="assets/pf-banking.webp" alt="Heritage sandstone banking chambers at 107 O'Connell Street, North Adelaide" loading="lazy"><span class="idx">04</span><span class="where">107 O'Connell Street, North Adelaide</span><div class="pc-body"><h3>Banking Chambers</h3><p>Heritage banking chambers on Adelaide high streets.</p><div class="addr">157 The Parade, Norwood &middot; 232 Unley Road, Unley &middot; 148 Hindley Street &middot; 107 O'Connell Street, North Adelaide</div><span class="tlink">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
-      <a class="pc" href="https://www.marasgroup.com.au/our-properties/data-centres/" target="_blank" rel="noopener"><img src="assets/pf-data.webp" alt="Aerial view of the Westpac Home Ownership Service Centre" loading="lazy"><span class="idx">05</span><span class="where">Aerial view</span><div class="pc-body"><h3>Data Centres</h3><p>Home of the Westpac Home Ownership Service Centre.</p><span class="tlink">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="pc" href="https://www.marasgroup.com.au/our-properties/data-centres/" target="_blank" rel="noopener"><img src="assets/pf-data.webp" alt="Aerial view of the Westpac Home Ownership Service Centre" loading="lazy"><span class="idx">05</span><span class="where">Aerial view</span><div class="pc-body"><h3>Data Centres</h3><p>A 24,607 m&sup2; building re-modelled for Westpac, originally to house the largest Mortgage Processing Centre in the Southern Hemisphere.</p><span class="tlink">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
       <a class="pc" href="https://www.marasgroup.com.au/our-properties/self-storage/" target="_blank" rel="noopener"><img src="assets/pf-storage.webp" alt="Concept image of a Roomia self storage facility" loading="lazy"><span class="idx">06</span><span class="where">Concept image, Oran Park (NSW)</span><div class="pc-body"><h3>Self Storage</h3><p>A partnership with Storage Investments Australia, rolling out brand-new Roomia facilities in Victoria, NSW and Queensland.</p><span class="tlink">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
       <a class="pc" href="https://www.marasgroup.com.au/our-properties/development-pipeline/" target="_blank" rel="noopener"><img src="assets/pf-pipeline.webp" alt="Concept image for 361-367 King William Street, Adelaide" loading="lazy"><span class="idx">07</span><span class="where">Concept, 361-367 King William Street</span><div class="pc-body"><h3>Development Pipeline</h3><p>Developing the properties of the future, today.</p><div class="addr">12-22 Richmond Road, Keswick &middot; 2-6 Hutt Street, Adelaide &middot; 361-367 King William Street, Adelaide</div><span class="tlink">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
     </div>
@@ -646,7 +652,8 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
     <div>
       <span class="eyebrow rv">Rundle Street East</span>
       <h2 class="rv d1">Adelaide's premier fashion and lifestyle <em>destination.</em></h2>
-      <p class="lede rv d2">A tightly held, highly sought-after precinct in the heart of the East End. Ebenezer Place comes alive in the warmer months, from the Adelaide Fringe to the famed Ebenezer Night Markets.</p>
+      <p class="lede rv d2">Some 18 separate properties, from 2 up to 6 levels, in a tightly held, highly sought-after precinct in the heart of the East End. Ebenezer Place comes alive in the warmer months, from the Adelaide Fringe to the famed Ebenezer Night Markets.</p>
+      <div class="rse-stats rv d2"><div><b>18</b><span>separate properties in the precinct</span></div><div><b>10,000+</b><span>people on average at each Ebenezer Night Market</span></div></div>
       <div class="acts rv d3">
         <a class="btn btn-brass" href="https://www.rundlestreet.com.au/" target="_blank" rel="noopener">Explore the precinct<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-ghost" href="https://www.marasgroup.com.au/our-properties/rundle-street-east/tenant-profile/" target="_blank" rel="noopener">Tenant profile</a>
@@ -690,6 +697,7 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
   <div class="wrap">
     <span class="eyebrow rv">Leadership</span>
     <h2 class="rv d1">Shaping development in South Australia <em>since the early 1980s.</em></h2>
+    <p class="lede rv d2" style="margin-top:22px">Father and son, Theo and Steve Maras have almost 75 years (combined) in the property industry.</p>
     <div class="lead-grid">
       <article class="person rv">
         <div class="ph"><img src="assets/pp-theo.webp" alt="Theo Maras AM" loading="lazy"></div>
