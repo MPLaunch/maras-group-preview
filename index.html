@@ -210,10 +210,13 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
 .lc-foot .enq:hover{color:var(--navy);border-color:var(--navy)}
 .lc.feat{grid-column:span 2}
 .lc.tall .lc-img{aspect-ratio:auto;flex:1 1 auto;min-height:300px}
+.lc-wait .size{font-size:34px}
+.wait-txt{margin:0 0 20px;color:var(--slate);font-size:15px;line-height:1.55}
+.enq-note{position:relative;z-index:2;font-size:12.5px;color:var(--slate-2)}
 .lc.feat .lc-img{aspect-ratio:16/8.4}
 .lc.feat h3{font-size:clamp(30px,2.8vw,42px)}
 .lc.feat .size{font-size:62px}
-.lc-cta{grid-column:span 2;background:var(--navy);color:#fff;border-radius:20px;padding:clamp(30px,4vw,54px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:30px;align-items:center;position:relative;overflow:hidden}
+.lc-cta{grid-column:1/-1;background:var(--navy);color:#fff;border-radius:20px;padding:clamp(30px,4vw,54px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:30px;align-items:center;position:relative;overflow:hidden}
 .lc-cta::before{content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;border:1px solid rgba(220,194,145,.18);box-shadow:0 0 0 60px rgba(220,194,145,.04),0 0 0 120px rgba(220,194,145,.03)}
 .lc-cta h3{font-size:clamp(32px,3vw,46px);line-height:1.05}
 .lc-cta p{color:rgba(255,255,255,.72);margin:14px 0 0}
@@ -404,7 +407,7 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
   body{font-size:16px}
   .hero-inner{padding-top:150px}
   .lgrid{grid-template-columns:1fr}
-  .lc.feat,.lc-cta{grid-column:auto}
+  .lc.feat{grid-column:auto}
   .lc.feat .lc-img{aspect-ratio:4/3}
   .lc.feat .size{font-size:44px}
   .stats{grid-template-columns:1fr}
@@ -480,7 +483,7 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
   <div class="hero-media">
     <div class="slide on" data-cap="Rundle Street East, Adelaide"><img src="assets/hero-rse.webp" alt="Rundle Street East at dusk, with outdoor dining under the verandahs" fetchpriority="high"></div>
     <div class="slide" data-cap="2 Ebenezer Place, Adelaide"><img src="assets/hero-ebenezer.webp" alt="The glass and timber-finned office building at 2 Ebenezer Place beside a heritage red-brick facade" fetchpriority="low"></div>
-    <div class="slide" data-cap="Concept: 12-22 Richmond Road, Keswick"><img src="assets/hero-keswick.webp" alt="Concept image of the planned development at 12-22 Richmond Road, Keswick" fetchpriority="low"></div>
+    <div class="slide" data-cap="Adelaide's East End"><img src="assets/hero-eastend.webp" alt="A corner building with a tall EASTEND sign and outdoor dining under the trees in Adelaide's East End" fetchpriority="low"></div>
   </div>
   <div class="hero-cap" aria-hidden="true"><span class="num">01</span><span class="txt">Rundle Street East, Adelaide</span><span class="pg"><i class="on"></i><i></i><i></i></span></div>
 
@@ -498,7 +501,7 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
       <span class="live"><i></i>Leasing now</span>
       <h2>Looking for space?</h2>
       <button class="opt" data-go="office"><span><b>Office space</b><small>4 spaces &middot; 84 to 437 m&sup2;</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-      <button class="opt" data-go="retail"><span><b>Retail shopfronts</b><small>2 spaces &middot; Rundle Street East &amp; Ebenezer Place</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <button class="opt" data-go="retail"><span><b>Retail shopfronts</b><small>Rundle Street East &middot; register your interest</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       <div class="call">Prefer to talk? <a href="tel:+61882124766">08 8212 4766</a></div>
     </aside>
   </div>
@@ -544,12 +547,7 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
         <h2 class="rv d1">Find your next <em>address.</em></h2>
       </div>
       <div class="rv d2">
-        <p class="lede">Offices, studios and shopfronts in Adelaide's East End, the CBD and the inner suburbs. See what's available, then talk to our leasing team directly.</p>
-        <div class="filters" role="tablist" aria-label="Filter spaces">
-          <button class="on" data-f="all" role="tab" aria-selected="true">All<sup>6</sup></button>
-          <button data-f="office" role="tab" aria-selected="false">Office<sup>4</sup></button>
-          <button data-f="retail" role="tab" aria-selected="false">Retail<sup>2</sup></button>
-        </div>
+        <p class="lede">Offices and studios available now across Adelaide's East End, the CBD and the inner suburbs. Shopfronts in Rundle Street East are tightly held: register your interest and talk to our leasing team directly.</p>
       </div>
     </div>
 
@@ -594,27 +592,17 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
         </div>
       </article>
 
-      <article class="lc rv d2" data-t="retail">
-        <div class="lc-img"><img src="assets/lease-run257.webp" alt="The curved glass shopfront at 257A Rundle Street" loading="lazy"><span class="chip">Retail</span><span class="size">88<small>m&sup2; approx.</small></span></div>
+      <article class="lc lc-wait rv d2" data-t="retail">
+        <div class="lc-img"><img src="assets/retail-ebenezer.webp" alt="Ebenezer Place at night, with shopfronts lit under festoon lights" loading="lazy"><span class="chip">Retail</span><span class="chip new">Register interest</span><span class="size">Rundle St East</span></div>
         <div class="lc-body">
-          <span class="lc-addr">257A Rundle Street, Adelaide</span>
-          <h3>Boutique retail on Rundle Street East</h3>
-          <ul class="tags"><li>Curved Art Deco-style glass shopfront</li><li>Premium existing fit-out</li></ul>
-          <div class="lc-foot"><a class="go" href="https://www.marasgroup.com.au/our-properties/for-lease/257a-rundle-street-adelaide/" target="_blank" rel="noopener">View space<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="enq" href="#contact" data-space="257A Rundle Street, Adelaide">Enquire</a></div>
+          <span class="lc-addr">Rundle Street &amp; Ebenezer Place</span>
+          <h3>Shopfronts in the East End</h3>
+          <p class="wait-txt">Shopfronts here are tightly held and rarely available. Register your interest and our leasing team will be in touch when the right space comes up.</p>
+          <div class="lc-foot"><a class="go" href="#contact" data-retail="1">Register interest<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span class="enq-note">Fashion &middot; food &middot; services</span></div>
         </div>
       </article>
 
-      <article class="lc rv" data-t="retail">
-        <div class="lc-img"><img src="assets/lease-ebe18.webp" alt="18 Ebenezer Place, a glass-fronted East End shop" loading="lazy"><span class="chip">Retail</span><span class="size">60<small>m&sup2;</small></span></div>
-        <div class="lc-body">
-          <span class="lc-addr">18 Ebenezer Place, Adelaide</span>
-          <h3>East End retail on Ebenezer Place</h3>
-          <ul class="tags"><li>Floor-to-ceiling glass frontage</li><li>Among popular East End operators</li></ul>
-          <div class="lc-foot"><a class="go" href="https://www.marasgroup.com.au/our-properties/for-lease/18-ebenezer-place-adelaide/" target="_blank" rel="noopener">View space<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="enq" href="#contact" data-space="18 Ebenezer Place, Adelaide">Enquire</a></div>
-        </div>
-      </article>
-
-      <div class="lc-cta rv d1" data-t="all">
+      <div class="lc-cta rv d1">
         <div>
           <h3>Can't see the <em>right fit?</em></h3>
           <p>Tell us what you're looking for, the size and the area, and our leasing team will come back to you.</p>
@@ -794,7 +782,7 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
           <select id="f-size" name="size"><option>Not sure yet</option><option>Under 100 m&sup2;</option><option>100 to 250 m&sup2;</option><option>250 to 500 m&sup2;</option><option>500 m&sup2; or more</option></select>
         </div>
         <div class="fld"><label for="f-sp">Space</label>
-          <select id="f-sp" name="space"><option>Any space</option><option>136 Frome Street, Adelaide</option><option>Levels 2 &amp; 5, 74 Pirie Street, Adelaide</option><option>Level 2, 2 Ebenezer Place, Adelaide</option><option>Unit 2, 148 Henley Beach Road, Torrensville</option><option>257A Rundle Street, Adelaide</option><option>18 Ebenezer Place, Adelaide</option></select>
+          <select id="f-sp" name="space"><option>Any space</option><option>136 Frome Street, Adelaide</option><option>Levels 2 &amp; 5, 74 Pirie Street, Adelaide</option><option>Level 2, 2 Ebenezer Place, Adelaide</option><option>Unit 2, 148 Henley Beach Road, Torrensville</option><option>Retail in Rundle Street East (register interest)</option></select>
         </div>
         <div class="fld full"><label for="f-msg">Anything else?</label><textarea id="f-msg" name="message" placeholder="Area, move-in timing, parking, fit-out..."></textarea></div>
       </div>
@@ -896,7 +884,9 @@ h2 em,h1 em,h3 em,.big em{font-style:italic;color:var(--brass-ink)}
       cards.forEach(function(c){var t=c.getAttribute('data-t');c.classList.toggle('hide',!(f==='all'||t===f||t==='all'));if(f!=='all')c.classList.add('in')});
     }
     fbtn.forEach(function(b){b.addEventListener('click',function(){filt(b.getAttribute('data-f'))})});
-    $$('.finder .opt').forEach(function(b){b.addEventListener('click',function(){filt(b.getAttribute('data-go'));$('#lease').scrollIntoView({behavior:reduce?'auto':'smooth'})})});
+    function toRetail(){var r=$('#enq input[value="Retail"]');if(r)r.checked=true;var sel=$('#f-sp');for(var i=0;i<sel.options.length;i++){if(/^Retail/.test(sel.options[i].text))sel.selectedIndex=i}}
+    $$('.finder .opt').forEach(function(b){b.addEventListener('click',function(){var g=b.getAttribute('data-go');if(g==='retail'){toRetail();$('#contact').scrollIntoView({behavior:reduce?'auto':'smooth'})}else{$('#lease').scrollIntoView({behavior:reduce?'auto':'smooth'})}})});
+    $$('[data-retail]').forEach(function(a){a.addEventListener('click',toRetail)});
 
     /* enquire buttons pre-fill the space */
     $$('.enq').forEach(function(a){a.addEventListener('click',function(){var s=a.getAttribute('data-space'),sel=$('#f-sp');for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===s){sel.selectedIndex=i}}})});
